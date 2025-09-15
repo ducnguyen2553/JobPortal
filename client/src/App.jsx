@@ -5,7 +5,7 @@ import {
   Navigate
 } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
-import JobSeekerDashboard from "./pages/JobSeeKer/JobSeekerDashboard";
+import JobSeekerDashboard from "./pages/JobSeeker/JobSeekerDashboard";
 import JobDetails from "./pages/JobSeeker/JobDetails";
 import SavedJobs from "./pages/JobSeeker/SavedJobs";
 import UserProfile from "./pages/JobSeeker/UserProfile";
