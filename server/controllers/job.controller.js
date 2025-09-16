@@ -18,6 +18,7 @@ exports.createJob = async (req, res) => {
 
 exports.getJobs = async (req, res) => {
     const { keyword, location, category, type, minSalary, maxSalary, userId } = req.query;
+   
     const query = {
         isClosed: false,
         ...(keyword && { title: { $regex: keyword, $options: "i" } }),
@@ -30,17 +31,18 @@ exports.getJobs = async (req, res) => {
         query.$and = [];//gộp điều kiện
 
         if (minSalary) {
-            query.$and.push({ minSalary: { $gte: Number(minSalary) } });
+            query.$and.push({ salaryMin: { $gte: Number(minSalary) } });
         }
 
         if (maxSalary) {
-            query.$and.push({ maxSalary: { $lte: Number(maxSalary) } });
+            query.$and.push({ salaryMax: { $lte: Number(maxSalary) } });
         }
 
         if (query.$and.length === 0) {
             delete query.$and;
         }
     }
+ 
 
     try {
         const jobs = await Job.find(query).populate(
@@ -61,7 +63,7 @@ exports.getJobs = async (req, res) => {
             applications.forEach((app) => {
                 appliedJobStatusMap[String(app.job)] = app.status;
             })
-        }
+        };
 
         const jobsWithExtras = jobs.map((job) => {
             const jobIdStr = String(job._id);

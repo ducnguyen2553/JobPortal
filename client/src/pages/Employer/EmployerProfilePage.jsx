@@ -12,6 +12,7 @@ import EditProfileDetails from './EditProfileDetails';
 const EmployerProfilePage = () => {
   const { user, updateUser } = useAuth();
 
+
   const [profileData, setProfileData] = useState({
     name: user?.name || "",
     email: user?.email || "",
@@ -20,7 +21,8 @@ const EmployerProfilePage = () => {
     companyDescription: user?.companyDescription || "",
     companyLogo: user?.companyLogo || "",
   });
-  // console.log(profileData);
+
+  console.log(user);
   const [editMode, setEditMode] = useState(false);
   const [formData, setFormData] = useState({ ...profileData });
   const [uploading, setUploading] = useState({ avatar: false, logo: false });
@@ -38,7 +40,7 @@ const EmployerProfilePage = () => {
 
     try {
       const imgUploadRes = await uploadImage(file);
-      const avatarUrl = imgUploadRes.imgUrl || "";
+      const avatarUrl = imgUploadRes.imageUrl || "";
 
       //update form data with new image url
       const field = type === "avatar" ? "avatar" : "companyLogo";

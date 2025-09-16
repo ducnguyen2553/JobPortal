@@ -34,7 +34,7 @@ const EditProfileDetails = ({
                     <div className="flex items-center space-x-4">
                       <div className="relative">
                         <img
-                          src={formData?.avatar}
+                          src={formData?.avatar || null}
                           alt="Avatar"
                           className="w-20 h-20 rounded-full object-cover border-4 border-gray-200"
                         />
@@ -129,7 +129,7 @@ const EditProfileDetails = ({
                         placeholder="Enter company name"
                       />
                     </div>
-                    
+
                     {/* Company Description */}
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">Company Description</label>
