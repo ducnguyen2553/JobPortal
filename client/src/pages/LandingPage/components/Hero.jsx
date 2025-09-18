@@ -3,14 +3,14 @@ import { Search, ArrowRight, Users, Building2, TrendingUp } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../../context/AuthContext";
 
-const Hero = () => {
+const Hero = ({ t }) => {
     const { user, isAuthenticated } = useAuth();
 
     const navigate = useNavigate();
     const stats = [
-        { icon: Users, label: "Active Users", value: "2.4M+" },
-        { icon: Building2, label: "Companies", value: "50K+" },
-        { icon: TrendingUp, label: "Jobs Posted", value: "150K+" }
+        { icon: Users, label: t("hero.stats.users"), value: "2.4M+" },
+        { icon: Building2, label: t("hero.stats.companies"), value: "50K+" },
+        { icon: TrendingUp, label: t("hero.stats.jobs"), value: "150K+" },
     ];
 
     return (
@@ -25,9 +25,9 @@ const Hero = () => {
                             transition={{ duration: 0.8 }}
                             className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight pt-10"
                         >
-                            Find Your Dream Hob or
+                            {t("hero.title")}
                             <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mt-2">
-                                Perfect Hire
+                                {t("hero.highlight")}
                             </span>
                         </motion.h1>
 
@@ -38,8 +38,7 @@ const Hero = () => {
                             transition={{ delay: 0.2, duration: 0.8 }}
                             className="text-xl md:text-xl text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed"
                         >
-                            Connect talented professionals with innovative companies.
-                            Your next career move or perfect candidate is just one click away.
+                            {t("hero.subtitle")}
                         </motion.p>
 
                         {/* CTA Buttons */}
@@ -57,7 +56,7 @@ const Hero = () => {
                                 onClick={() => navigate("/find-jobs")}
                             >
                                 <Search className="w-5 h-5" />
-                                <span>Find Jobs</span>
+                                <span>{t("hero.cta.findJobs")}</span>
                                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </motion.button>
 
@@ -73,7 +72,7 @@ const Hero = () => {
                                     );
                                 }}
                             >
-                                Post a Job
+                                {t("hero.cta.postJob")}
                             </motion.button>
                         </motion.div>
 

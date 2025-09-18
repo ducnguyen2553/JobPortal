@@ -1,0 +1,135 @@
+{
+    "jobSeekerFeatures": {
+        "smartMatch": {
+            "title": "Smart Job Matching",
+            "description": "AI-powered algorithm matches you with relevant opportunities based on your skills and preferences."
+        },
+        "resume": {
+            "title": "Resume Builder",
+            "description": "Create professional resumes with our intuitive builder and templates designed by experts."
+        },
+        "chat": {
+            "title": "Direct Communication",
+            "description": "Connect directly with hiring managers and recruiters through our secure messaging platform."
+        },
+        "skill": {
+            "title": "Skill Assessment",
+            "description": "Showcase your abilities with verified skill tests and earn badges that employers trust."
+        }
+    },
+    "employerFeatures": {
+        "talent": {
+            "title": "Talent Pool Access",
+            "description": "Access our vast database of pre-screened candidates and find the perfect fit for your team."
+        },
+        "analytics": {
+            "title": "Analytics Dashboard",
+            "description": "Track your hiring performance with detailed analytics and insights on candidate engagement."
+        },
+        "verified": {
+            "title": "Verified Candidates",
+            "description": "All candidates undergo background verification to ensure you're hiring trustworthy professionals."
+        },
+        "quick": {
+            "title": "Quick Hiring",
+            "description": "Streamlined hiring process reduces time-to-hire by 60% with automated screening tools."
+        }
+    },
+    "menu": {
+        "dashboard": "Dashboard",
+        "postJob": "Post Job",
+        "manageJobs": "Manage Jobs",
+        "companyProfile": "Company Profile"
+    },
+    "categories": {
+        "engineering": "Engineering",
+        "design": "Design",
+        "marketing": "Marketing",
+        "sales": "Sales",
+        "it": "IT & Software",
+        "cs": "Customer Service",
+        "product": "Product",
+        "operations": "Operations",
+        "finance": "Finance",
+        "hr": "Human Resources",
+        "other": "Other"
+    },
+    "jobTypes": {
+        "remote": "Remote",
+        "fulltime": "Full-Time",
+        "parttime": "Part-Time",
+        "contract": "Contract",
+        "internship": "Internship"
+    },
+    "salary": {
+        "low": "Less than $1000",
+        "mid": "$1000 - $15,000",
+        "high": "More than $15,000"
+    },
+    "header": {
+        "findJobs": "Find Jobs",
+        "forEmployer": "For Employer",
+        "welcome": "Welcome",
+        "dashboard": "Dashboard",
+        "login": "Login",
+        "signup": "Sign Up"
+    },
+    "hero": {
+        "title": "Find Your Dream Job or",
+        "highlight": "Perfect Hire",
+        "subtitle": "Connect talented professionals with innovative companies. Your next career move or perfect candidate is just one click away.",
+        "cta": {
+            "findJobs": "Find Jobs",
+            "postJob": "Post a Job"
+        },
+        "stats": {
+            "users": "Active Users",
+            "companies": "Companies",
+            "jobs": "Jobs Posted"
+        }
+    },
+    "features": {
+        "title": "Everything You Need to",
+        "highlight": "Succeed",
+        "subtitle": "Whether you're looking for your next opportunity or the perfect candidate, we have the tools and features to make it happen.",
+        "jobSeekers": "For Job Seekers",
+        "employers": "For Employers"
+    },
+    "analytics": {
+        "title": "Platform",
+        "highlight": "Analytics",
+        "subtitle": "Real-time insight and data-driven result that showcase the power of our platform in connecting talent with opportunities",
+        "activeUsers": "Active Users",
+        "jobsPosted": "Jobs Posted",
+        "successful": "Successful Matches",
+        "matchRate": "Match Rate"
+    },
+    "footer": {
+        "company": "MyCompany",
+        "slogan": "Empowering Success – Building Connections",
+        "hotline": "Hotline: 0123 456 789",
+        "email": "Email:",
+        "copyright": "All rights reserved.",
+        "about": {
+            "title": "About Us",
+            "intro": "Introduction",
+            "contact": "Contact",
+            "careers": "Careers",
+            "privacy": "Privacy Policy"
+        },
+        "services": {
+            "title": "Services",
+            "cv": "CV Management",
+            "itJobs": "IT Jobs",
+            "managementJobs": "Management Jobs",
+            "partTime": "Part-time Jobs"
+        },
+        "explore": {
+            "title": "Explore",
+            "app": "Mobile App",
+            "calculator": "Gross - Net Calculator",
+            "mbti": "MBTI Test",
+            "cvReview": "CV Review"
+        }
+    }
+}

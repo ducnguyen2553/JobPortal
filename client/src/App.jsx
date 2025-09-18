@@ -19,45 +19,45 @@ import Login from "./pages/Auth/Login";
 import ProtectedRoute from "./router/ProtectedRoute";
 import LandingPage from "./pages/LandingPage/LandingPage";
 import { AuthProvider } from './context/AuthContext.jsx';
-
+import "./locales/i18n.js";
 
 const App = () => {
   return (
     <AuthProvider>
-        <Router>
-          <Routes>
-            {/* Public Routes */}
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/signup" element={<SignUp />} />
-            <Route path="/login" element={<Login />} />
+      <Router>
+        <Routes>
+          {/* Public Routes */}
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/login" element={<Login />} />
 
-            <Route path="find-jobs" element={<JobSeekerDashboard />} />
-            <Route path="job/:jobId" element={<JobDetails />} />
-            <Route path="saved-jobs" element={<SavedJobs />} />
-            <Route path="profile" element={<UserProfile />} />
+          <Route path="find-jobs" element={<JobSeekerDashboard />} />
+          <Route path="job/:jobId" element={<JobDetails />} />
+          <Route path="saved-jobs" element={<SavedJobs />} />
+          <Route path="profile" element={<UserProfile />} />
 
-            {/* Protected Routes */}
-            <Route element={<ProtectedRoute requiredRole="employer" />}>
-              <Route path="/employer-dashboard" element={<EmployerDashboard />} />
-              <Route path="/post-job" element={<JobPostingForm />} />
-              <Route path="/manage-jobs" element={<ManageJobs />} />
-              <Route path="/applicants" element={<ApplicationViewer />} />
-              <Route path="/company-profile" element={<EmployerProfilePage />} />
-            </Route>
+          {/* Protected Routes */}
+          <Route element={<ProtectedRoute requiredRole="employer" />}>
+            <Route path="/employer-dashboard" element={<EmployerDashboard />} />
+            <Route path="/post-job" element={<JobPostingForm />} />
+            <Route path="/manage-jobs" element={<ManageJobs />} />
+            <Route path="/applicants" element={<ApplicationViewer />} />
+            <Route path="/company-profile" element={<EmployerProfilePage />} />
+          </Route>
 
-            {/* Catch all route */}
-            <Route path="*" element={<Navigate to="/" replace />} />
-          </Routes>
-        </Router>
+          {/* Catch all route */}
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </Router>
 
-        <Toaster
-          toastOptions={{
-            className:"",
-            style: {
-              fontSize: "13px",
-            },
-          }}
-        />
+      <Toaster
+        toastOptions={{
+          className: "",
+          style: {
+            fontSize: "13px",
+          },
+        }}
+      />
     </AuthProvider>
   )
 }

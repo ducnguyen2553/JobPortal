@@ -1,0 +1,135 @@
+{
+    "jobSeekerFeatures": {
+        "smartMatch": {
+            "title": "Kết Nối Việc Làm Thông Minh",
+            "description": "Thuật toán AI gợi ý công việc phù hợp với kỹ năng và sở thích của bạn."
+        },
+        "resume": {
+            "title": "Trình Tạo CV",
+            "description": "Tạo CV chuyên nghiệp dễ dàng với các mẫu do chuyên gia thiết kế."
+        },
+        "chat": {
+            "title": "Liên Lạc Trực Tiếp",
+            "description": "Kết nối trực tiếp với nhà tuyển dụng qua nền tảng nhắn tin bảo mật."
+        },
+        "skill": {
+            "title": "Đánh Giá Kỹ Năng",
+            "description": "Khẳng định khả năng với các bài test kỹ năng được xác thực và huy hiệu đáng tin cậy."
+        }
+    },
+    "employerFeatures": {
+        "talent": {
+            "title": "Kho Ứng Viên",
+            "description": "Truy cập cơ sở dữ liệu ứng viên được kiểm duyệt sẵn để tìm nhân sự phù hợp."
+        },
+        "analytics": {
+            "title": "Bảng Điều Khiển Phân Tích",
+            "description": "Theo dõi hiệu quả tuyển dụng với thống kê chi tiết và dữ liệu ứng viên."
+        },
+        "verified": {
+            "title": "Ứng Viên Đã Xác Thực",
+            "description": "Tất cả ứng viên đều được xác minh lý lịch để đảm bảo tính minh bạch."
+        },
+        "quick": {
+            "title": "Tuyển Dụng Nhanh",
+            "description": "Quy trình tuyển dụng tự động giúp rút ngắn 60% thời gian tuyển."
+        }
+    },
+    "menu": {
+        "dashboard": "Bảng Điều Khiển",
+        "postJob": "Đăng Tin",
+        "manageJobs": "Quản Lý Việc Làm",
+        "companyProfile": "Hồ Sơ Công Ty"
+    },
+    "categories": {
+        "engineering": "Kỹ Thuật",
+        "design": "Thiết Kế",
+        "marketing": "Marketing",
+        "sales": "Kinh Doanh",
+        "it": "CNTT & Phần Mềm",
+        "cs": "Chăm Sóc Khách Hàng",
+        "product": "Sản Phẩm",
+        "operations": "Vận Hành",
+        "finance": "Tài Chính",
+        "hr": "Nhân Sự",
+        "other": "Khác"
+    },
+    "jobTypes": {
+        "remote": "Làm Từ Xa",
+        "fulltime": "Toàn Thời Gian",
+        "parttime": "Bán Thời Gian",
+        "contract": "Hợp Đồng",
+        "internship": "Thực Tập"
+    },
+    "salary": {
+        "low": "Dưới 23 triệu",
+        "mid": "Từ 23 triệu - 350 triệu",
+        "high": "Trên 350 triệu"
+    },
+    "header": {
+        "findJobs": "Tìm việc",
+        "forEmployer": "Dành cho Nhà tuyển dụng",
+        "welcome": "Xin chào",
+        "dashboard": "Bảng điều khiển",
+        "login": "Đăng nhập",
+        "signup": "Đăng ký"
+    },
+    "hero": {
+        "title": "Tìm công việc mơ ước của bạn",
+        "highlight": "Ứng viên phù hợp",
+        "subtitle": "Kết nối các chuyên gia tài năng với những công ty sáng tạo. Cơ hội nghề nghiệp tiếp theo hoặc ứng viên hoàn hảo của bạn.",
+        "cta": {
+            "findJobs": "Tìm việc",
+            "postJob": "Đăng tuyển"
+        },
+        "stats": {
+            "users": "Người dùng",
+            "companies": "Công ty",
+            "jobs": "Việc làm"
+        }
+    },
+    "features": {
+        "title": "Mọi thứ bạn cần để",
+        "highlight": "Thành công",
+        "subtitle": "Dù bạn đang tìm cơ hội mới hay ứng viên phù hợp, chúng tôi có đầy đủ công cụ và tính năng để giúp bạn.",
+        "jobSeekers": "Dành cho Người tìm việc",
+        "employers": "Dành cho Nhà tuyển dụng"
+    },
+    "analytics": {
+        "title": "Nền tảng",
+        "highlight": "Phân tích",
+        "subtitle": "Cung cấp thông tin theo thời gian thực và kết quả dựa trên dữ liệu, thể hiện sức mạnh của nền tảng trong việc kết nối nhân tài với cơ hội",
+        "activeUsers": "Người dùng đang hoạt động",
+        "jobsPosted": "Việc làm đã đăng",
+        "successful": "Kết nối thành công",
+        "matchRate": "Tỷ lệ ghép phù hợp"
+    },
+    "footer": {
+        "company": "MyCompany",
+        "slogan": "Tiếp lợi thế – Nối thành công",
+        "hotline": "Hotline: 0123 456 789",
+        "email": "Email:",
+        "copyright": "Bảo lưu mọi quyền.",
+        "about": {
+            "title": "Về chúng tôi",
+            "intro": "Giới thiệu",
+            "contact": "Liên hệ",
+            "careers": "Tuyển dụng",
+            "privacy": "Chính sách bảo mật"
+        },
+        "services": {
+            "title": "Dịch vụ",
+            "cv": "Quản lý CV",
+            "itJobs": "Việc làm IT",
+            "managementJobs": "Việc làm quản lý",
+            "partTime": "Việc làm bán thời gian"
+        },
+        "explore": {
+            "title": "Khám phá",
+            "app": "Ứng dụng di động",
+            "calculator": "Tính lương Gross - Net",
+            "mbti": "Trắc nghiệm MBTI",
+            "cvReview": "Review CV"
+        }
+    }
+}

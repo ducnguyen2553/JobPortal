@@ -1,20 +1,22 @@
 import { employerFeatures, jobSeekerFeatures } from "../../../utils/data.js"
 
-const Features = () => {
+const Features = ({ t }) => {
+    const seekerFeatures = jobSeekerFeatures(t);
+    const empFeatures = employerFeatures(t);
+
     return (
         <>
             <section className="py-20 bg-white relative overflow-hidden">
                 <div className="container mx-auto px-4 relative z-10">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                            Everything You Need to
-                            <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                                Succeed
+                            {t("features.title")}
+                            <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent leading-relaxed">
+                                {t("features.highlight")}
                             </span>
                         </h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                            Whether you're looking for your next opportunity or the perfect
-                            candidate, we have the tools and features to make it happen.
+                            {t("features.subtitle")}
                         </p>
                     </div>
 
@@ -23,13 +25,13 @@ const Features = () => {
                         <div>
                             <div className="text-center mb-12">
                                 <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                                    For Job Seekers
+                                    {t("features.jobSeekers")}
                                 </h3>
                                 <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-blue-500 mx-auto rounded-full" />
                             </div>
 
                             <div className="space-y-8">
-                                {jobSeekerFeatures.map((feature, index) => (
+                                {seekerFeatures.map((feature, index) => (
                                     <div
                                         key={index}
                                         className="group flex items-start space-x-4 p-6 rounded-2xl hover:bg-blue-50 transition-all duration-300 cursor-pointer"
@@ -54,12 +56,12 @@ const Features = () => {
                         <div>
                             <div className="text-center mb-12">
                                 <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                                    For Employers
+                                    {t("features.employers")}
                                 </h3>
                                 <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-purple-600 mx-auto rounded-full" />
                             </div>
                             <div className="space-y-8">
-                                {employerFeatures.map((feature, index) => (
+                                {empFeatures.map((feature, index) => (
                                     <div
                                         key={index}
                                         className="group flex items-start space-x-4 p-6 rounded-2xl hover:bg-purple-50 transition-all duration-300 cursor-pointer"
