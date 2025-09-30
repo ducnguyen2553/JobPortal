@@ -3,14 +3,14 @@ import { Search, ArrowRight, Users, Building2, TrendingUp } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../../context/AuthContext";
 
-const Hero = ({ t }) => {
+const Hero = () => {
     const { user, isAuthenticated } = useAuth();
 
     const navigate = useNavigate();
     const stats = [
-        { icon: Users, label: t("hero.stats.users"), value: "2.4M+" },
-        { icon: Building2, label: t("hero.stats.companies"), value: "50K+" },
-        { icon: TrendingUp, label: t("hero.stats.jobs"), value: "150K+" },
+        { icon: Users, label: "Active Users", value: "2.4M+" },
+        { icon: Building2, label: "Companies", value: "50K+" },
+        { icon: TrendingUp, label: "Jobs Posted", value: "150K+" },
     ];
 
     return (
@@ -25,9 +25,9 @@ const Hero = ({ t }) => {
                             transition={{ duration: 0.8 }}
                             className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight pt-10"
                         >
-                            {t("hero.title")}
+                            Find Your Dream Job or
                             <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mt-2">
-                                {t("hero.highlight")}
+                                Perfect Hire
                             </span>
                         </motion.h1>
 
@@ -38,7 +38,7 @@ const Hero = ({ t }) => {
                             transition={{ delay: 0.2, duration: 0.8 }}
                             className="text-xl md:text-xl text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed"
                         >
-                            {t("hero.subtitle")}
+                            Connect talented professionals with innovative companies. Your next career move or perfect candidate is just one click away.
                         </motion.p>
 
                         {/* CTA Buttons */}
@@ -56,7 +56,7 @@ const Hero = ({ t }) => {
                                 onClick={() => navigate("/find-jobs")}
                             >
                                 <Search className="w-5 h-5" />
-                                <span>{t("hero.cta.findJobs")}</span>
+                                <span>Find Jobs</span>
                                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </motion.button>
 
@@ -72,7 +72,7 @@ const Hero = ({ t }) => {
                                     );
                                 }}
                             >
-                                {t("hero.cta.postJob")}
+                                Post a Job
                             </motion.button>
                         </motion.div>
 

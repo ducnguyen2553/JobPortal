@@ -1,112 +1,3 @@
-// import {
-//     Search,
-//     Users,
-//     FileText,
-//     MessageSquare,
-//     BarChart3,
-//     Shield,
-//     Clock,
-//     Award,
-//     Briefcase,
-//     Building2,
-//     LayoutDashboard,
-//     Plus,
-// } from "lucide-react";
-
-// // Features for Job Seekers
-// export const jobSeekerFeatures = [
-//     {
-//         icon: Search,
-//         title: "Smart Job Matching",
-//         description:
-//             "AI-powered algorithm matches you with relevant opportunities based on your skills and preferences.",
-//     },
-//     {
-//         icon: FileText,
-//         title: "Resume Builder",
-//         description:
-//             "Create professional resumes with our intuitive builder and templates designed by experts.",
-//     },
-//     {
-//         icon: MessageSquare,
-//         title: "Direct Communication",
-//         description:
-//             "Connect directly with hiring managers and recruiters through our secure messaging platform.",
-//     },
-//     {
-//         icon: Award,
-//         title: "Skill Assessment",
-//         description:
-//             "Showcase your abilities with verified skill tests and earn badges that employers trust.",
-//     },
-// ];
-
-// // Features for Employers
-// export const employerFeatures = [
-//     {
-//         icon: Users,
-//         title: "Talent Pool Access",
-//         description:
-//             "Access our vast database of pre-screened candidates and find the perfect fit for your team.",
-//     },
-//     {
-//         icon: BarChart3,
-//         title: "Analytics Dashboard",
-//         description:
-//             "Track your hiring performance with detailed analytics and insights on candidate engagement.",
-//     },
-//     {
-//         icon: Shield,
-//         title: "Verified Candidates",
-//         description:
-//             "All candidates undergo background verification to ensure you're hiring trustworthy professionals.",
-//     },
-//     {
-//         icon: Clock,
-//         title: "Quick Hiring",
-//         description:
-//             "Streamlined hiring process reduces time-to-hire by 60% with automated screening tools.",
-//     },
-// ];
-
-// //Navigation items configuration
-// export const NAVIGATION_MENU = [
-//     { id: "employer-dashboard", name: "Dashboard", icon: LayoutDashboard },
-//     { id: "post-job", name: "Post Job", icon: Plus },
-//     { id: "manage-jobs", name: "Manage Jobs", icon: Briefcase },
-//     { id: "company-profile", name: "Company Profile", icon: Building2 },
-// ];
-
-// // Categories and job types
-// export const CATEGORIES = [
-//     { value: "Engineering", label: "Engineering" },
-//     { value: "Design", label: "Design" },
-//     { value: "Marketing", label: "Marketing" },
-//     { value: "Sales", label: "Sales" },
-//     { value: "IT & Software", label: "IT & Software" },
-//     { value: "Customer-service", label: "Customer Service" },
-//     { value: "Product", label: "Product" },
-//     { value: "Operations", label: "Operations" },
-//     { value: "Finance", label: "Finance" },
-//     { value: "HR", label: "Human Resources" },
-//     { value: "Other", label: "Other" },
-// ];
-
-// export const JOB_TYPES = [
-//     { value: "Remote", label: "Remote" },
-//     { value: "Full-Time", label: "Full-Time" },
-//     { value: "Part-Time", label: "Part-Time" },
-//     { value: "Contract", label: "Contract" },
-//     { value: "Internship", label: "Internship" },
-// ];
-
-// export const SALARY_RANGERS = [
-//     "Less than $1000",
-//     "$1000 -$15,000",
-//     "More than $15,000",
-// ]
-
-
 import {
     Search,
     Users,
@@ -123,86 +14,195 @@ import {
 } from "lucide-react";
 
 // Features for Job Seekers
-export const jobSeekerFeatures = (t) => [
+export const jobSeekerFeatures = [
     {
         icon: Search,
-        title: t("jobSeekerFeatures.smartMatch.title"),
-        description: t("jobSeekerFeatures.smartMatch.description"),
+        title: "Smart Job Matching",
+        description:
+            "AI-powered algorithm matches you with relevant opportunities based on your skills and preferences.",
     },
     {
         icon: FileText,
-        title: t("jobSeekerFeatures.resume.title"),
-        description: t("jobSeekerFeatures.resume.description"),
+        title: "Resume Builder",
+        description:
+            "Create professional resumes with our intuitive builder and templates designed by experts.",
     },
     {
         icon: MessageSquare,
-        title: t("jobSeekerFeatures.chat.title"),
-        description: t("jobSeekerFeatures.chat.description"),
+        title: "Direct Communication",
+        description:
+            "Connect directly with hiring managers and recruiters through our secure messaging platform.",
     },
     {
         icon: Award,
-        title: t("jobSeekerFeatures.skill.title"),
-        description: t("jobSeekerFeatures.skill.description"),
+        title: "Skill Assessment",
+        description:
+            "Showcase your abilities with verified skill tests and earn badges that employers trust.",
     },
 ];
 
 // Features for Employers
-export const employerFeatures = (t) => [
+export const employerFeatures = [
     {
         icon: Users,
-        title: t("employerFeatures.talent.title"),
-        description: t("employerFeatures.talent.description"),
+        title: "Talent Pool Access",
+        description:
+            "Access our vast database of pre-screened candidates and find the perfect fit for your team.",
     },
     {
         icon: BarChart3,
-        title: t("employerFeatures.analytics.title"),
-        description: t("employerFeatures.analytics.description"),
+        title: "Analytics Dashboard",
+        description:
+            "Track your hiring performance with detailed analytics and insights on candidate engagement.",
     },
     {
         icon: Shield,
-        title: t("employerFeatures.verified.title"),
-        description: t("employerFeatures.verified.description"),
+        title: "Verified Candidates",
+        description:
+            "All candidates undergo background verification to ensure you're hiring trustworthy professionals.",
     },
     {
         icon: Clock,
-        title: t("employerFeatures.quick.title"),
-        description: t("employerFeatures.quick.description"),
+        title: "Quick Hiring",
+        description:
+            "Streamlined hiring process reduces time-to-hire by 60% with automated screening tools.",
     },
 ];
 
-// Navigation menu
-export const NAVIGATION_MENU = (t) => [
-    { id: "employer-dashboard", name: t("menu.dashboard"), icon: LayoutDashboard },
-    { id: "post-job", name: t("menu.postJob"), icon: Plus },
-    { id: "manage-jobs", name: t("menu.manageJobs"), icon: Briefcase },
-    { id: "company-profile", name: t("menu.companyProfile"), icon: Building2 },
+//Navigation items configuration
+export const NAVIGATION_MENU = [
+    { id: "employer-dashboard", name: "Dashboard", icon: LayoutDashboard },
+    { id: "post-job", name: "Post Job", icon: Plus },
+    { id: "manage-jobs", name: "Manage Jobs", icon: Briefcase },
+    { id: "company-profile", name: "Company Profile", icon: Building2 },
 ];
 
 // Categories and job types
-export const CATEGORIES = (t) => [
-    { value: "Engineering", label: t("categories.engineering") },
-    { value: "Design", label: t("categories.design") },
-    { value: "Marketing", label: t("categories.marketing") },
-    { value: "Sales", label: t("categories.sales") },
-    { value: "IT & Software", label: t("categories.it") },
-    { value: "Customer-service", label: t("categories.cs") },
-    { value: "Product", label: t("categories.product") },
-    { value: "Operations", label: t("categories.operations") },
-    { value: "Finance", label: t("categories.finance") },
-    { value: "HR", label: t("categories.hr") },
-    { value: "Other", label: t("categories.other") },
+export const CATEGORIES = [
+    { value: "Engineering", label: "Engineering" },
+    { value: "Design", label: "Design" },
+    { value: "Marketing", label: "Marketing" },
+    { value: "Sales", label: "Sales" },
+    { value: "IT & Software", label: "IT & Software" },
+    { value: "Customer-service", label: "Customer Service" },
+    { value: "Product", label: "Product" },
+    { value: "Operations", label: "Operations" },
+    { value: "Finance", label: "Finance" },
+    { value: "HR", label: "Human Resources" },
+    { value: "Other", label: "Other" },
 ];
 
-export const JOB_TYPES = (t) => [
-    { value: "Remote", label: t("jobTypes.remote") },
-    { value: "Full-Time", label: t("jobTypes.fulltime") },
-    { value: "Part-Time", label: t("jobTypes.parttime") },
-    { value: "Contract", label: t("jobTypes.contract") },
-    { value: "Internship", label: t("jobTypes.internship") },
+export const JOB_TYPES = [
+    { value: "Remote", label: "Remote" },
+    { value: "Full-Time", label: "Full-Time" },
+    { value: "Part-Time", label: "Part-Time" },
+    { value: "Contract", label: "Contract" },
+    { value: "Internship", label: "Internship" },
 ];
 
-export const SALARY_RANGERS = (t) => [
-    t("salary.low"),
-    t("salary.mid"),
-    t("salary.high"),
-];
+export const SALARY_RANGERS = [
+    "Less than $1000",
+    "$1000 -$15,000",
+    "More than $15,000",
+]
+
+
+// import {
+//     Search,
+//     Users,
+//     FileText,
+//     MessageSquare,
+//     BarChart3,
+//     Shield,
+//     Clock,
+//     Award,
+//     Briefcase,
+//     Building2,
+//     LayoutDashboard,
+//     Plus,
+// } from "lucide-react";
+
+// // Features for Job Seekers
+// export const jobSeekerFeatures = (t) => [
+//     {
+//         icon: Search,
+//         title: t("jobSeekerFeatures.smartMatch.title"),
+//         description: t("jobSeekerFeatures.smartMatch.description"),
+//     },
+//     {
+//         icon: FileText,
+//         title: t("jobSeekerFeatures.resume.title"),
+//         description: t("jobSeekerFeatures.resume.description"),
+//     },
+//     {
+//         icon: MessageSquare,
+//         title: t("jobSeekerFeatures.chat.title"),
+//         description: t("jobSeekerFeatures.chat.description"),
+//     },
+//     {
+//         icon: Award,
+//         title: t("jobSeekerFeatures.skill.title"),
+//         description: t("jobSeekerFeatures.skill.description"),
+//     },
+// ];
+
+// // Features for Employers
+// export const employerFeatures = (t) => [
+//     {
+//         icon: Users,
+//         title: t("employerFeatures.talent.title"),
+//         description: t("employerFeatures.talent.description"),
+//     },
+//     {
+//         icon: BarChart3,
+//         title: t("employerFeatures.analytics.title"),
+//         description: t("employerFeatures.analytics.description"),
+//     },
+//     {
+//         icon: Shield,
+//         title: t("employerFeatures.verified.title"),
+//         description: t("employerFeatures.verified.description"),
+//     },
+//     {
+//         icon: Clock,
+//         title: t("employerFeatures.quick.title"),
+//         description: t("employerFeatures.quick.description"),
+//     },
+// ];
+
+// // Navigation menu
+// export const NAVIGATION_MENU = (t) => [
+//     { id: "employer-dashboard", name: t("menu.dashboard"), icon: LayoutDashboard },
+//     { id: "post-job", name: t("menu.postJob"), icon: Plus },
+//     { id: "manage-jobs", name: t("menu.manageJobs"), icon: Briefcase },
+//     { id: "company-profile", name: t("menu.companyProfile"), icon: Building2 },
+// ];
+
+// // Categories and job types
+// export const CATEGORIES = (t) => [
+//     { value: "Engineering", label: t("categories.engineering") },
+//     { value: "Design", label: t("categories.design") },
+//     { value: "Marketing", label: t("categories.marketing") },
+//     { value: "Sales", label: t("categories.sales") },
+//     { value: "IT & Software", label: t("categories.it") },
+//     { value: "Customer-service", label: t("categories.cs") },
+//     { value: "Product", label: t("categories.product") },
+//     { value: "Operations", label: t("categories.operations") },
+//     { value: "Finance", label: t("categories.finance") },
+//     { value: "HR", label: t("categories.hr") },
+//     { value: "Other", label: t("categories.other") },
+// ];
+
+// export const JOB_TYPES = (t) => [
+//     { value: "Remote", label: t("jobTypes.remote") },
+//     { value: "Full-Time", label: t("jobTypes.fulltime") },
+//     { value: "Part-Time", label: t("jobTypes.parttime") },
+//     { value: "Contract", label: t("jobTypes.contract") },
+//     { value: "Internship", label: t("jobTypes.internship") },
+// ];
+
+// export const SALARY_RANGERS = (t) => [
+//     t("salary.low"),
+//     t("salary.mid"),
+//     t("salary.high"),
+// ];

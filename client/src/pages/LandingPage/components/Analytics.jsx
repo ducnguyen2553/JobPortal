@@ -2,32 +2,32 @@
 import { motion } from "framer-motion";
 import { TrendingUp, Users, Briefcase, Target } from "lucide-react";
 
-const Analytics = ({ t }) => {
+const Analytics = () => {
     const stats = [
         {
             icon: Users,
-            title: t("analytics.activeUsers"),
+            title: "Active Users",
             value: "2.4M+",
             growth: "+15%",
             color: "blue"
         },
         {
             icon: Briefcase,
-            title: t("analytics.jobsPosted"),
+            title: "Jobs Posted",
             value: "150K+",
             growth: "+22%",
             color: "purple"
         },
         {
             icon: Target,
-            title: t("analytics.successful"),
+            title: "Successful Matches",
             value: "89K+",
             growth: "+18%",
             color: "blue"
         },
         {
             icon: TrendingUp,
-            title: t("analytics.matchRate"),
+            title: "Match Rate",
             value: "94%",
             growth: "+8%",
             color: "purple"
@@ -47,11 +47,11 @@ const Analytics = ({ t }) => {
                         className="text-center mb-16"
                     >
                         <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                            {t("analytics.title")}
-                            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> {t("analytics.highlight")}</span>
+                            Platform
+                            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Analytics</span>
                         </h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                            {t("analytics.subtitle")}
+                            Real-time insight and data-driven result that showcase the power of our platform in connecting talent with opportunities
                         </p>
                     </motion.div>
 

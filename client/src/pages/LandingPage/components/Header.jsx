@@ -2,17 +2,16 @@ import { motion } from "framer-motion";
 import { Briefcase } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../../context/AuthContext.jsx";
-import { useTranslation } from "react-i18next";
 
-const Header = ({t,i18n}) => {
+const Header = () => {
   const { user, isAuthenticated } = useAuth();
 
   const navigate = useNavigate();
 
 
-  const toggleLanguage = () => {
-    i18n.changeLanguage(i18n.language === "en" ? "vi" : "en");
-  };
+  // const toggleLanguage = () => {
+  //   i18n.changeLanguage(i18n.language === "en" ? "vi" : "en");
+  // };
 
   return (
     <>
@@ -36,7 +35,7 @@ const Header = ({t,i18n}) => {
             <nav className="hidden md:flex items-center space-x-8">
               <a onClick={() => navigate("/find-jobs")}
                 className="text-gray-600 hover:text-gray-900 transition-colors font-medium">
-                {t("header.findJobs")}
+                Find Jobs
               </a>
 
               <a onClick={() => {
@@ -47,22 +46,22 @@ const Header = ({t,i18n}) => {
               }}
                 className="text-gray-600 hover:text-gray-900 transition-colors font-medium"
               >
-                {t("header.forEmployer")}
+                For Employer
               </a>
             </nav>
 
             {/* Auth Buttons */}
             <div className="flex items-center space-x-3">
-              <button
+              {/* <button
                 onClick={toggleLanguage}
                 className="px-3 py-1 rounded-lg border border-gray-100 text-sm font-medium hover:bg-gray-100 transition shadow"
               >
                 {i18n.language === "en" ? "EN" : "VI"}
-              </button>
+              </button> */}
 
               {isAuthenticated ? (
                 <div className="flex items-center space-x-3">
-                  <span className="text-gray-700"> {t("header.welcome")}, {user?.name}</span>
+                  <span className="text-gray-700"> Welcome, {user?.name}</span>
                   <a href={
                     user?.role === "employer"
                       ? "/employer-dashboard" : "find-jobs"
@@ -75,11 +74,11 @@ const Header = ({t,i18n}) => {
                 <>
                   <a href="/login"
                     className="text-gray-600 hover:text-gray-900 transition-colors font-medium px-4 py-2 rounded-lg hover:bg-gray-50"
-                  >{t("header.login")}</a>
+                  >Login</a>
                   <a href="/signup"
                     className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-medium
                      hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-sm hover:shadow-md"
-                  >{t("header.signup")}</a>
+                  >Sign Up</a>
                 </>
               )}
             </div>

@@ -1,15 +1,15 @@
-import { useState, useEffect } from 'react';
-import { Search, Filter, Grid, List, X } from 'lucide-react';
-import LoadingSpinner from '../../components/LoadingSpinner';
-import axiosInstance from '../../utils/axiosInstance';
-import { API_PATHS } from '../../utils/apiPaths';
-import { useNavigate } from 'react-router-dom';
-import toast from 'react-hot-toast';
-import { useAuth } from '../../context/AuthContext';
-import FilterContent from './components/FilterContent.jsx';
-import SearchHeader from './components/SearchHeader.jsx';
-import Navbar from '../../components/layout/Navbar.jsx';
-import JobCard from '../../components/Cards/JobCard.jsx';
+import { useState, useEffect } from "react";
+import { Search, Filter, Grid, List, X } from "lucide-react";
+import LoadingSpinner from "../../components/LoadingSpinner";
+import axiosInstance from "../../utils/axiosInstance";
+import { API_PATHS } from "../../utils/apiPaths";
+import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
+import { useAuth } from "../../context/AuthContext";
+import FilterContent from "./components/FilterContent.jsx";
+import SearchHeader from "./components/SearchHeader.jsx";
+import Navbar from "../../components/layout/Navbar.jsx";
+import JobCard from "../../components/Cards/JobCard.jsx";
 
 const JobSeekerDashboard = () => {
   const { user } = useAuth();
@@ -49,15 +49,21 @@ const JobSeekerDashboard = () => {
       const params = new URLSearchParams();
 
       if (filterParams.keyword) params.append("keyword", filterParams.keyword);
-      if (filterParams.location) params.append("location", filterParams.location);
-      if (filterParams.minSalary) params.append("minSalary", filterParams.minSalary);
-      if (filterParams.maxSalary) params.append("maxSalary", filterParams.maxSalary);
+      if (filterParams.location)
+        params.append("location", filterParams.location);
+      if (filterParams.minSalary)
+        params.append("minSalary", filterParams.minSalary);
+      if (filterParams.maxSalary)
+        params.append("maxSalary", filterParams.maxSalary);
       if (filterParams.type) params.append("type", filterParams.type);
-      if (filterParams.category) params.append("category", filterParams.category);
+      if (filterParams.category)
+        params.append("category", filterParams.category);
 
       if (user) params.append("userId", user?._id);
 
-      const response = await axiosInstance.get(`${API_PATHS.JOBS.GET_ALL_JOBS}?${params.toString()}`);
+      const response = await axiosInstance.get(
+        `${API_PATHS.JOBS.GET_ALL_JOBS}?${params.toString()}`
+      );
 
       const jobsData = Array.isArray(response.data)
         ? response.data
@@ -72,7 +78,7 @@ const JobSeekerDashboard = () => {
     }
   };
 
-  //fetch job when filters change 
+  //fetch job when filters change
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       const apiFilters = {
@@ -83,7 +89,7 @@ const JobSeekerDashboard = () => {
         category: filters.category,
         type: filters.type,
         experience: filters.experience,
-        remoteOnly: filters.remoteOnly
+        remoteOnly: filters.remoteOnly,
       };
 
       //only call api if there are meaningful filters
@@ -98,12 +104,12 @@ const JobSeekerDashboard = () => {
       if (hasFilters) {
         fetchJobs(apiFilters);
       } else {
-        fetchJobs();//fetch all jobs if no filter
+        fetchJobs(); //fetch all jobs if no filter
       }
     }, 500);
 
     return () => clearTimeout(timeoutId);
-  }, [filters, user])
+  }, [filters, user]);
 
   const handleFilterChange = (key, value) => {
     setFilters((prev) => ({ ...prev, [key]: value }));
@@ -111,7 +117,7 @@ const JobSeekerDashboard = () => {
 
   const toggleSection = (section) => {
     setExpandedSections((prev) => ({ ...prev, [section]: !prev[section] }));
-  }
+  };
 
   const clearAllFilters = () => {
     setFilters({
@@ -120,13 +126,16 @@ const JobSeekerDashboard = () => {
       category: "",
       type: "",
       minSalary: "",
-      maxSalary: ""
+      maxSalary: "",
     });
   };
 
   const MobileFilterOverlay = () => {
-    <div className={`fixed inset-0 z-50 lg:hidden ${showMobileFilter ? "" : "hidden"
-      }`}>
+    <div
+      className={`fixed inset-0 z-50 lg:hidden ${
+        showMobileFilter ? "" : "hidden"
+      }`}
+    >
       <div
         className="fixed inset-0 bg-black/50"
         onClick={() => setShowMobileFilter(false)}
@@ -136,7 +145,8 @@ const JobSeekerDashboard = () => {
             <h3 className="font-bold text-gray-900 text-lg">Filters</h3>
             <button
               onClick={() => setShowMobileFilter(false)}
-              className="p-2 hover:bg-gray-900 rounded-xl transition-colors">
+              className="p-2 hover:bg-gray-900 rounded-xl transition-colors"
+            >
               <X className="w-5 h-5" />
             </button>
           </div>
@@ -151,7 +161,7 @@ const JobSeekerDashboard = () => {
           </div>
         </div>
       </div>
-    </div>
+    </div>;
   };
 
   const toggleSaveJob = async (jobId, isSaved) => {
@@ -244,25 +254,26 @@ const JobSeekerDashboard = () => {
                     <div className="flex items-center border border-gray-200 rounded-xl p-1 bg-white">
                       <button
                         onClick={() => setViewMode("grid")}
-                        className={`p-2 rounded-lg transition-colors ${viewMode === "grid"
-                          ? "bg-blue-600 text-white shadow-sm"
-                          : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
-                          }`}
+                        className={`p-2 rounded-lg transition-colors ${
+                          viewMode === "grid"
+                            ? "bg-blue-600 text-white shadow-sm"
+                            : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+                        }`}
                       >
                         <Grid className="w-4 h-4" />
                       </button>
                       <button
                         onClick={() => setViewMode("list")}
-                        className={`p-2 rounded-lg transition-colors ${viewMode === "list"
-                          ? "bg-blue-600 text-white shadow-sm"
-                          : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
-                          }`}
+                        className={`p-2 rounded-lg transition-colors ${
+                          viewMode === "list"
+                            ? "bg-blue-600 text-white shadow-sm"
+                            : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+                        }`}
                       >
                         <List className="w-4 h-4" />
                       </button>
                     </div>
                   </div>
-
                 </div>
               </div>
 
@@ -280,16 +291,20 @@ const JobSeekerDashboard = () => {
                   </p>
                   <button
                     onClick={clearAllFilters}
-                    className="bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition-colors">
+                    className="bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition-colors"
+                  >
                     Clear All Filters
                   </button>
                 </div>
               ) : (
                 <>
-                  <div className={viewMode === "grid"
-                    ? "grid grid-col-1 lg:grid-cols-2 xl:grid-cols-2 gap-4 lg:gap-6"
-                    : "space-y-4 lg:space-y-6"
-                  }>
+                  <div
+                    className={
+                      viewMode === "grid"
+                        ? "grid grid-col-1 lg:grid-cols-2 xl:grid-cols-2 gap-4 lg:gap-6"
+                        : "space-y-4 lg:space-y-6"
+                    }
+                  >
                     {jobs.map((job) => (
                       <JobCard
                         key={job._id}
@@ -302,18 +317,15 @@ const JobSeekerDashboard = () => {
                   </div>
                 </>
               )}
-
             </div>
-
           </div>
         </div>
 
         {/* Mobile Filter Overlay */}
         <MobileFilterOverlay />
       </div>
-
     </div>
-  )
-}
+  );
+};
 
-export default JobSeekerDashboard
+export default JobSeekerDashboard;
